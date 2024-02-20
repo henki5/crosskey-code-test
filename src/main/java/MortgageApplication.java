@@ -2,6 +2,7 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.List;
+import java.util.Locale;
 
 public class MortgageApplication {
     public static void main(String args[]) {
@@ -24,7 +25,7 @@ public class MortgageApplication {
             MortgageData md = dataList.get(i);
             double monthlyPayment = MortgageCalculator.monthlyPayment(md);
             result += "*".repeat(100) + "\n";
-            result += String.format("Prospect %d: %s wants to borrow %f € for a period of %d years and pay %f € each month\n",
+            result += String.format(Locale.ENGLISH, "Prospect %d: %s wants to borrow %f € for a period of %d years and pay %f € each month\n",
                     i, md.getCustomerName(), md.getTotalLoan(), md.getYears(), monthlyPayment);
         }
         result += "*".repeat(100) + "\n";
