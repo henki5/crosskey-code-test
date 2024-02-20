@@ -4,4 +4,4 @@ My solution to the code test.
 mvn clean install
 mvn exec:java -Dexec.args="[PATH TO PROSPECTS.TXT]"
 ```
-The above commands **do not work properly in Powershell**. Use the Command Prompt on windows.
+The above commands **do not work properly in Powershell**. Use the Command Prompt on Windows.
